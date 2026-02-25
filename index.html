@@ -42,9 +42,23 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Slider Section -->
     <section id="accueil" class="hero">
-        <div class="hero-bg-overlay"></div>
+        <!-- Background Slider -->
+        <div class="hero-slider">
+            <div class="hero-slide active" style="background-image: url('img/hero1.jpg')">
+                <div class="slide-overlay"></div>
+            </div>
+            <div class="hero-slide" style="background-image: url('img/hero2.jpg')">
+                <div class="slide-overlay"></div>
+            </div>
+            <div class="hero-slide" style="background-image: url('img/hero3.jpg')">
+                <div class="slide-overlay"></div>
+            </div>
+            <div class="hero-slide" style="background-image: url('img/hero4.jpg')">
+                <div class="slide-overlay"></div>
+            </div>
+        </div>
         <div class="particles" id="particles"></div>
         <div class="container hero-content">
             <div class="hero-badge fade-up">
@@ -82,6 +96,13 @@
                 </div>
             </div>
         </div>
+        <!-- Slider Navigation -->
+        <div class="hero-slider-nav">
+            <span class="slider-dot active" data-slide="0"></span>
+            <span class="slider-dot" data-slide="1"></span>
+            <span class="slider-dot" data-slide="2"></span>
+            <span class="slider-dot" data-slide="3"></span>
+        </div>
         <div class="hero-scroll">
             <a href="#services"><i class="fas fa-chevron-down"></i></a>
         </div>
@@ -97,52 +118,58 @@
             </div>
             <div class="services-grid">
                 <div class="service-card fade-up" data-tilt>
-                    <div class="service-icon">
-                        <i class="fas fa-file-invoice-dollar"></i>
+                    <div class="service-img"><img src="img/service-impots.jpg" alt="Impôts & Taxes"></div>
+                    <div class="service-body">
+                        <div class="service-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+                        <h3>Impôts & Taxes</h3>
+                        <p>Déclarations fiscales au Canada, optimisation d'impôts, crédits et remboursements maximisés pour vous.</p>
+                        <a href="#contact" class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
                     </div>
-                    <h3>Impôts & Taxes</h3>
-                    <p>Déclarations fiscales au Canada, optimisation d'impôts, crédits et remboursements maximisés pour vous.</p>
-                    <a href="#contact" class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="service-card fade-up delay-1" data-tilt>
-                    <div class="service-icon">
-                        <i class="fas fa-shield-halved"></i>
+                    <div class="service-img"><img src="img/service-assurance.jpg" alt="Assurances"></div>
+                    <div class="service-body">
+                        <div class="service-icon"><i class="fas fa-shield-halved"></i></div>
+                        <h3>Assurances</h3>
+                        <p>Protection complète : auto, habitation, entreprise. Les meilleures couvertures aux meilleurs prix.</p>
+                        <a href="#contact" class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
                     </div>
-                    <h3>Assurances</h3>
-                    <p>Protection complète : auto, habitation, entreprise. Les meilleures couvertures aux meilleurs prix.</p>
-                    <a href="#contact" class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="service-card fade-up delay-2" data-tilt>
-                    <div class="service-icon">
-                        <i class="fas fa-graduation-cap"></i>
+                    <div class="service-img"><img src="img/service-formation.jpg" alt="Formations"></div>
+                    <div class="service-body">
+                        <div class="service-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <h3>Formations</h3>
+                        <p>Programmes de formation financière pour particuliers et entreprises. Prenez le contrôle de vos finances.</p>
+                        <a href="#contact" class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
                     </div>
-                    <h3>Formations</h3>
-                    <p>Programmes de formation financière pour particuliers et entreprises. Prenez le contrôle de vos finances.</p>
-                    <a href="#contact" class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="service-card fade-up delay-3" data-tilt>
-                    <div class="service-icon">
-                        <i class="fas fa-hand-holding-heart"></i>
+                    <div class="service-img"><img src="img/service-famille.jpg" alt="Protection Familiale"></div>
+                    <div class="service-body">
+                        <div class="service-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                        <h3>Protection Familiale</h3>
+                        <p>Protégez vos proches en Afrique et en Haïti. Plans de retraite et assurance-vie adaptés à chaque famille.</p>
+                        <a href="#contact" class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
                     </div>
-                    <h3>Protection Familiale</h3>
-                    <p>Protégez vos proches en Afrique et en Haïti. Plans de retraite et assurance-vie adaptés à chaque famille.</p>
-                    <a href="#contact" class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="service-card fade-up delay-4" data-tilt>
-                    <div class="service-icon">
-                        <i class="fas fa-chart-line"></i>
+                    <div class="service-img"><img src="img/service-finance.jpg" alt="Planification Financière"></div>
+                    <div class="service-body">
+                        <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                        <h3>Planification Financière</h3>
+                        <p>Stratégies personnalisées pour atteindre vos objectifs financiers. Investissement, épargne, retraite.</p>
+                        <a href="#contact" class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
                     </div>
-                    <h3>Planification Financière</h3>
-                    <p>Stratégies personnalisées pour atteindre vos objectifs financiers. Investissement, épargne, retraite.</p>
-                    <a href="#contact" class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="service-card fade-up delay-5" data-tilt>
-                    <div class="service-icon">
-                        <i class="fas fa-globe-africa"></i>
+                    <div class="service-img"><img src="img/service-international.jpg" alt="Services Internationaux"></div>
+                    <div class="service-body">
+                        <div class="service-icon"><i class="fas fa-globe-africa"></i></div>
+                        <h3>Services Internationaux</h3>
+                        <p>Solutions adaptées aux réalités africaines et haïtiennes. Accompagnement de la diaspora.</p>
+                        <a href="#contact" class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
                     </div>
-                    <h3>Services Internationaux</h3>
-                    <p>Solutions adaptées aux réalités africaines et haïtiennes. Accompagnement de la diaspora.</p>
-                    <a href="#contact" class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -154,7 +181,7 @@
             <div class="about-grid">
                 <div class="about-image fade-left">
                     <div class="about-img-wrapper">
-                        <img src="img/hero-bg.webp" alt="FINAB Équipe">
+                        <img src="img/about.jpg" alt="FINAB Équipe">
                         <div class="about-badge">
                             <span class="badge-number">10+</span>
                             <span class="badge-text">Années d'Excellence</span>
@@ -201,19 +228,28 @@
             </div>
             <div class="regions-grid">
                 <div class="region-card fade-up">
-                    <div class="region-icon">🌍</div>
-                    <h3>Afrique</h3>
-                    <p>Protection des biens aimés, assurance-vie, plans de retraite adaptés aux réalités du continent.</p>
+                    <div class="region-img"><img src="img/region-afrique.jpg" alt="Afrique"></div>
+                    <div class="region-body">
+                        <div class="region-icon">🌍</div>
+                        <h3>Afrique</h3>
+                        <p>Protection des biens aimés, assurance-vie, plans de retraite adaptés aux réalités du continent.</p>
+                    </div>
                 </div>
                 <div class="region-card fade-up delay-1">
-                    <div class="region-icon">🇭🇹</div>
-                    <h3>Haïti</h3>
-                    <p>Solutions financières dédiées aux familles haïtiennes. Accompagnement complet et personnalisé.</p>
+                    <div class="region-img"><img src="img/region-haiti.jpg" alt="Haïti"></div>
+                    <div class="region-body">
+                        <div class="region-icon">🇭🇹</div>
+                        <h3>Haïti</h3>
+                        <p>Solutions financières dédiées aux familles haïtiennes. Accompagnement complet et personnalisé.</p>
+                    </div>
                 </div>
                 <div class="region-card fade-up delay-2">
-                    <div class="region-icon">🇨🇦</div>
-                    <h3>Canada</h3>
-                    <p>Impôts, taxes, assurances auto/habitation/entreprise. Services complets pour la diaspora.</p>
+                    <div class="region-img"><img src="img/region-canada.jpg" alt="Canada"></div>
+                    <div class="region-body">
+                        <div class="region-icon">🇨🇦</div>
+                        <h3>Canada</h3>
+                        <p>Impôts, taxes, assurances auto/habitation/entreprise. Services complets pour la diaspora.</p>
+                    </div>
                 </div>
             </div>
         </div>
