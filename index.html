@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FINAB La Solution — La Résurrection Financière | Afrique - Haïti - Canada</title>
+    <meta name="description" content="FINAB La Solution : services financiers, impôts, assurances et formations pour les familles canadiennes, africaines et haïtiennes.">
+    <link rel="icon" href="img/logo.webp">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/chatbot.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader">
+            <img src="img/logo.webp" alt="FINAB" class="loader-logo">
+            <div class="loader-bar"><div class="loader-progress"></div></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header id="navbar" class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="nav-logo">
+                <img src="img/logo.webp" alt="FINAB La Solution">
+            </a>
+            <nav class="nav-menu" id="navMenu">
+                <a href="#accueil" class="nav-link active">Accueil</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#apropos" class="nav-link">À Propos</a>
+                <a href="#temoignages" class="nav-link">Témoignages</a>
+                <a href="#diagnostic" class="nav-link">Diagnostic</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#diagnostic" class="nav-btn">Diagnostic Gratuit</a>
+            </nav>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero">
+        <div class="hero-bg-overlay"></div>
+        <div class="particles" id="particles"></div>
+        <div class="container hero-content">
+            <div class="hero-badge fade-up">
+                <i class="fas fa-shield-halved"></i>
+                Votre partenaire financier de confiance
+            </div>
+            <h1 class="hero-title fade-up delay-1">
+                La <span class="text-gradient">Résurrection</span><br>
+                Financière
+            </h1>
+            <p class="hero-subtitle fade-up delay-2">
+                Solutions financières complètes pour les familles d'<strong>Afrique</strong>, d'<strong>Haïti</strong> et du <strong>Canada</strong>. 
+                Impôts, assurances, formations — nous trouvons toujours la solution.
+            </p>
+            <div class="hero-cta fade-up delay-3">
+                <a href="#diagnostic" class="btn btn-primary btn-lg">
+                    <i class="fas fa-stethoscope"></i> Diagnostic Financier Gratuit
+                </a>
+                <a href="#services" class="btn btn-outline btn-lg">
+                    <i class="fas fa-arrow-right"></i> Nos Services
+                </a>
+            </div>
+            <div class="hero-stats fade-up delay-4">
+                <div class="stat">
+                    <span class="stat-number" data-count="1500">0</span>+
+                    <span class="stat-label">Familles Accompagnées</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="3">0</span>
+                    <span class="stat-label">Continents</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="10">0</span>+
+                    <span class="stat-label">Années d'Expérience</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <a href="#services"><i class="fas fa-chevron-down"></i></a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section services">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="section-tag">Nos Services</span>
+                <h2 class="section-title">Des Solutions <span class="text-gradient">Sur Mesure</span></h2>
+                <p class="section-desc">Quelle que soit la complexité de votre dossier, nos experts trouvent toujours la solution.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card fade-up" data-tilt>
+                    <div class="service-icon">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <h3>Impôts & Taxes</h3>
+                    <p>Déclarations fiscales au Canada, optimisation d'impôts, crédits et remboursements maximisés pour vous.</p>
+                    <a href="#contact" class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card fade-up delay-1" data-tilt>
+                    <div class="service-icon">
+                        <i class="fas fa-shield-halved"></i>
+                    </div>
+                    <h3>Assurances</h3>
+                    <p>Protection complète : auto, habitation, entreprise. Les meilleures couvertures aux meilleurs prix.</p>
+                    <a href="#contact" class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card fade-up delay-2" data-tilt>
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Formations</h3>
+                    <p>Programmes de formation financière pour particuliers et entreprises. Prenez le contrôle de vos finances.</p>
+                    <a href="#contact" class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card fade-up delay-3" data-tilt>
+                    <div class="service-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3>Protection Familiale</h3>
+                    <p>Protégez vos proches en Afrique et en Haïti. Plans de retraite et assurance-vie adaptés à chaque famille.</p>
+                    <a href="#contact" class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card fade-up delay-4" data-tilt>
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Planification Financière</h3>
+                    <p>Stratégies personnalisées pour atteindre vos objectifs financiers. Investissement, épargne, retraite.</p>
+                    <a href="#contact" class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card fade-up delay-5" data-tilt>
+                    <div class="service-icon">
+                        <i class="fas fa-globe-africa"></i>
+                    </div>
+                    <h3>Services Internationaux</h3>
+                    <p>Solutions adaptées aux réalités africaines et haïtiennes. Accompagnement de la diaspora.</p>
+                    <a href="#contact" class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="apropos" class="section about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image fade-left">
+                    <div class="about-img-wrapper">
+                        <img src="img/hero-bg.webp" alt="FINAB Équipe">
+                        <div class="about-badge">
+                            <span class="badge-number">10+</span>
+                            <span class="badge-text">Années d'Excellence</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content fade-right">
+                    <span class="section-tag">À Propos</span>
+                    <h2 class="section-title">La Solution pour <span class="text-gradient">Toutes les Familles</span></h2>
+                    <p>FINAB La Solution se positionne comme le partenaire financier de référence pour les familles canadiennes, africaines et haïtiennes. Notre mission : donner l'espoir et les outils à chaque famille pour bâtir un avenir financier solide.</p>
+                    <p>Nous sommes fiers d'avoir des professionnels qui surpassent leurs concurrents. Nous croyons qu'une maman qui vend le pain mérite de savoir que sa retraite est possible dans cette activité.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Équipe d'experts pluridisciplinaires</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Traitement personnalisé de chaque dossier</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Présence en Afrique, Haïti et Canada</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Programmes de formation spéciaux</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-phone"></i> Contactez-Nous
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Regions Section -->
+    <section class="section regions">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="section-tag">Notre Présence</span>
+                <h2 class="section-title">Nous Servons <span class="text-gradient">3 Continents</span></h2>
+            </div>
+            <div class="regions-grid">
+                <div class="region-card fade-up">
+                    <div class="region-icon">🌍</div>
+                    <h3>Afrique</h3>
+                    <p>Protection des biens aimés, assurance-vie, plans de retraite adaptés aux réalités du continent.</p>
+                </div>
+                <div class="region-card fade-up delay-1">
+                    <div class="region-icon">🇭🇹</div>
+                    <h3>Haïti</h3>
+                    <p>Solutions financières dédiées aux familles haïtiennes. Accompagnement complet et personnalisé.</p>
+                </div>
+                <div class="region-card fade-up delay-2">
+                    <div class="region-icon">🇨🇦</div>
+                    <h3>Canada</h3>
+                    <p>Impôts, taxes, assurances auto/habitation/entreprise. Services complets pour la diaspora.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="temoignages" class="section testimonials">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="section-tag">Témoignages</span>
+                <h2 class="section-title">Ce que Disent <span class="text-gradient">Nos Clients</span></h2>
+            </div>
+            <div class="testimonials-slider fade-up">
+                <div class="testimonial-card active">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Vous, les gars, vous êtes tout simplement incroyables ! Sam est sans aucun doute le meilleur spécialiste en assurance avec qui j'ai jamais travaillé. Non seulement il est extrêmement compétent, mais il est également très sympathique et attentif. Mes assurances auto, habitation et entreprise sont tous avec Finab à cause de Sam. Merci pour l'excellent travail !"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"><i class="fas fa-user-circle"></i></div>
+                        <div>
+                            <strong>Lisa Wesley</strong>
+                            <span>Directeur Marketing, WholeSeeds Ltd.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Grâce à FINAB, j'ai pu optimiser mes déclarations d'impôts et économiser plus de 2000$. Leur équipe est professionnelle, réactive et toujours disponible pour répondre à mes questions. Je recommande vivement !"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"><i class="fas fa-user-circle"></i></div>
+                        <div>
+                            <strong>Jean-Pierre Toussaint</strong>
+                            <span>Entrepreneur, Montréal</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"FINAB m'a aidé à mettre en place un plan de retraite pour ma mère au Togo. C'est rassurant de savoir qu'elle est protégée. Merci pour votre humanité et votre professionnalisme !"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"><i class="fas fa-user-circle"></i></div>
+                        <div>
+                            <strong>Ama Koudjo</strong>
+                            <span>Infirmière, Toronto</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-nav">
+                    <button class="test-prev" aria-label="Précédent"><i class="fas fa-chevron-left"></i></button>
+                    <div class="test-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <button class="test-next" aria-label="Suivant"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diagnostic Section -->
+    <section id="diagnostic" class="section diagnostic">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="section-tag">Diagnostic Financier</span>
+                <h2 class="section-title">Évaluez Votre <span class="text-gradient">Santé Financière</span></h2>
+                <p class="section-desc">Répondez à quelques questions et recevez un diagnostic personnalisé gratuit de nos experts.</p>
+            </div>
+            <div class="diagnostic-wrapper fade-up">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScCma5qRB0hT_2P0PGqeSwTeg1uvLmOYzKhtQ_eGNnMEmuTTg/viewform?embedded=true" width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0" style="border-radius: 16px; border: none;">Chargement…</iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-content fade-up">
+                <h2>Prêt à Prendre le Contrôle de Vos Finances ?</h2>
+                <p>Nos experts sont disponibles pour vous accompagner. Prenez rendez-vous dès aujourd'hui.</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-white btn-lg">
+                        <i class="fas fa-calendar-check"></i> Prendre Rendez-Vous
+                    </a>
+                    <a href="tel:+1234567890" class="btn btn-outline-white btn-lg">
+                        <i class="fas fa-phone"></i> Appelez-Nous
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="section-header fade-up">
+                <span class="section-tag">Contact</span>
+                <h2 class="section-title">Parlons de <span class="text-gradient">Votre Projet</span></h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info fade-left">
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h4>Nos Bureaux</h4>
+                            <p>Canada · Afrique · Haïti</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>contact@finablasolution.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <h4>Téléphone</h4>
+                            <p>+1 (XXX) XXX-XXXX</p>
+                        </div>
+                    </div>
+                    <div class="contact-socials">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form fade-right" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Nom Complet *</label>
+                            <input type="text" id="name" name="name" required placeholder="Votre nom">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Téléphone *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="Votre numéro">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="Votre email">
+                    </div>
+                    <div class="form-group">
+                        <label for="region">Région</label>
+                        <select id="region" name="region">
+                            <option value="">Choisir une région</option>
+                            <option value="canada">Produits au Canada</option>
+                            <option value="afrique">Produits en Afrique</option>
+                            <option value="haiti">Produits en Haïti</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Décrivez votre besoin..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg btn-full">
+                        <i class="fas fa-paper-plane"></i> Envoyer le Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="img/logo.webp" alt="FINAB La Solution" class="footer-logo">
+                    <p>La résurrection financière. Solutions complètes pour les familles d'Afrique, d'Haïti et du Canada.</p>
+                    <div class="footer-socials">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigation</h4>
+                    <a href="#accueil">Accueil</a>
+                    <a href="#services">Services</a>
+                    <a href="#apropos">À Propos</a>
+                    <a href="#temoignages">Témoignages</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <a href="#services">Impôts & Taxes</a>
+                    <a href="#services">Assurances</a>
+                    <a href="#services">Formations</a>
+                    <a href="#services">Protection Familiale</a>
+                    <a href="#diagnostic">Diagnostic Financier</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-envelope"></i> contact@finablasolution.com</p>
+                    <p><i class="fas fa-globe"></i> finablasolution.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 FINAB La Solution. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot -->
+    <div id="chatbot" class="chatbot">
+        <button class="chatbot-toggle" id="chatbotToggle" aria-label="Assistant virtuel">
+            <i class="fas fa-comments"></i>
+            <span class="chatbot-pulse"></span>
+        </button>
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <div class="chatbot-header-info">
+                    <div class="chatbot-avatar"><i class="fas fa-robot"></i></div>
+                    <div>
+                        <strong>Assistant FINAB</strong>
+                        <span class="chatbot-status">En ligne</span>
+                    </div>
+                </div>
+                <button class="chatbot-close" id="chatbotClose"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="chat-message bot">
+                    <div class="chat-bubble">
+                        👋 Bonjour ! Je suis l'assistant virtuel de FINAB La Solution. Comment puis-je vous aider aujourd'hui ?
+                    </div>
+                </div>
+                <div class="chat-suggestions">
+                    <button class="suggestion" data-msg="Quels sont vos services ?">📋 Nos Services</button>
+                    <button class="suggestion" data-msg="Je veux prendre rendez-vous">📅 Prendre RDV</button>
+                    <button class="suggestion" data-msg="Je veux faire mon diagnostic financier">🔍 Diagnostic</button>
+                    <button class="suggestion" data-msg="Comment vous contacter ?">📞 Contact</button>
+                </div>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="chatInput" placeholder="Tapez votre message..." autocomplete="off">
+                <button id="chatSend"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <button id="backToTop" class="back-to-top" aria-label="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+</html>
