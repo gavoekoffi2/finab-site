@@ -133,28 +133,11 @@ const dots = document.querySelectorAll('.dot');
 let currentSlide = 0;
 
 function showSlide(index) {
-        testimonials.forEach(t => t.classList.remove('active'));
-    sliderDots.forEach(d => d.classList.remove('active'));
-    currentHeroSlide = (index + heroSlides.length) % heroSlides.length;
-    heroSlides[currentHeroSlide].classList.add('active');
-    sliderDots[currentHeroSlide].classList.add('active');
-}
-
-sliderDots.forEach((dot, i) => dot.addEventListener('click', () => showHeroSlide(i)));
-setInterval(() => showHeroSlide(currentHeroSlide + 1), 5000);
-
-// Testimonials slider
-const testimonials = document.querySelectorAll('.testimonial-card');
-const dots = document.querySelectorAll('.dot');
-let currentSlide = 0;
-
-function showSlide(index) {
     testimonials.forEach(t => t.classList.remove('active'));
     dots.forEach(d => d.classList.remove('active'));
     currentSlide = (index + testimonials.length) % testimonials.length;
     testimonials[currentSlide].classList.add('active');
     dots[currentSlide].classList.add('active');
-}
 }
 
 document.querySelector('.test-next')?.addEventListener('click', () => showSlide(currentSlide + 1));
