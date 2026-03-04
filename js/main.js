@@ -147,6 +147,35 @@ dots.forEach((dot, i) => dot.addEventListener('click', () => showSlide(i)));
 // Auto-slide
 setInterval(() => showSlide(currentSlide + 1), 6000);
 
+// Réussites slider
+const reussitesTrack = document.getElementById('reussitesTrack');
+const reussPrev = document.getElementById('reussPrev');
+const reussNext = document.getElementById('reussNext');
+if (reussitesTrack) {
+    let reussPos = 0;
+    const reussSlides = reussitesTrack.querySelectorAll('.reussite-slide');
+    function getReussVisible() {
+        if (window.innerWidth <= 640) return 1;
+        if (window.innerWidth <= 992) return 2;
+        return 3;
+    }
+    function moveReuss(dir) {
+        const visible = getReussVisible();
+        const maxPos = reussSlides.length - visible;
+        reussPos = Math.max(0, Math.min(reussPos + dir, maxPos));
+        const slideWidth = reussitesTrack.parentElement.offsetWidth / visible;
+        reussitesTrack.style.transform = `translateX(-${reussPos * (slideWidth + 24)}px)`;
+    }
+    reussNext.addEventListener('click', () => moveReuss(1));
+    reussPrev.addEventListener('click', () => moveReuss(-1));
+    setInterval(() => {
+        const visible = getReussVisible();
+        const maxPos = reussSlides.length - visible;
+        if (reussPos >= maxPos) reussPos = -1;
+        moveReuss(1);
+    }, 4000);
+}
+
 // Contact form
 document.getElementById('contactForm')?.addEventListener('submit', (e) => {
     e.preventDefault();
