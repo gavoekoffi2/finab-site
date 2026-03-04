@@ -186,3 +186,22 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         if (target) target.scrollIntoView({ behavior: 'smooth' });
     });
 });
+
+// Gallery filter
+const galleryFilters = document.querySelectorAll('.gallery-filter');
+const galleryItems = document.querySelectorAll('.gallery-item');
+
+galleryFilters.forEach(filter => {
+    filter.addEventListener('click', () => {
+        galleryFilters.forEach(f => f.classList.remove('active'));
+        filter.classList.add('active');
+        const category = filter.dataset.filter;
+        galleryItems.forEach(item => {
+            if (category === 'all' || item.dataset.category === category) {
+                item.classList.remove('hidden');
+            } else {
+                item.classList.add('hidden');
+            }
+        });
+    });
+});
