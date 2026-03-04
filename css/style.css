@@ -497,6 +497,186 @@ body {
 .footer-links p i { margin-right: 8px; }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding: 20px 0; text-align: center; font-size: 0.85rem; opacity: 0.6; }
 
+/* ===== ACHIEVEMENTS SLIDER ===== */
+.achievements-section { background: var(--navy); color: var(--white); overflow: hidden; }
+.achievements-section .section-tag { background: rgba(255,255,255,0.1); color: var(--white); }
+.achievements-section .text-gradient {
+    background: linear-gradient(135deg, var(--green-light), var(--gold));
+    -webkit-background-clip: text; background-clip: text;
+}
+.achievements-section .section-desc { color: rgba(255,255,255,0.7); }
+
+.achieve-slider {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius);
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+}
+.achieve-track {
+    display: flex;
+    transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform;
+}
+.achieve-slide {
+    min-width: 100%;
+    position: relative;
+    flex-shrink: 0;
+}
+.achieve-img {
+    width: 100%;
+    height: 520px;
+    overflow: hidden;
+    position: relative;
+}
+.achieve-img::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 30%, rgba(26,31,54,0.95) 90%);
+    z-index: 1;
+}
+.achieve-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    transition: transform 6s ease-out;
+}
+.achieve-slide.active .achieve-img img {
+    transform: scale(1.08);
+}
+.achieve-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 40px 50px;
+    z-index: 2;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s;
+}
+.achieve-slide.active .achieve-caption {
+    transform: translateY(0);
+    opacity: 1;
+}
+.achieve-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    background: rgba(27,107,58,0.6);
+    backdrop-filter: blur(8px);
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 16px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+.achieve-caption h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+.achieve-caption p {
+    font-size: 1rem;
+    opacity: 0.85;
+    max-width: 600px;
+    line-height: 1.7;
+}
+
+/* Slider Navigation */
+.achieve-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: var(--white);
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.achieve-nav:hover {
+    background: var(--green);
+    border-color: var(--green);
+    box-shadow: 0 8px 30px rgba(27,107,58,0.4);
+    transform: translateY(-50%) scale(1.1);
+}
+.achieve-prev { left: 20px; }
+.achieve-next { right: 20px; }
+
+/* Progress Bar */
+.achieve-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: rgba(255,255,255,0.1);
+    z-index: 10;
+}
+.achieve-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--green), var(--gold));
+    width: 0%;
+    transition: width 0.3s ease;
+    border-radius: 0 2px 2px 0;
+}
+
+/* Dots */
+.achieve-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    background: rgba(0,0,0,0.2);
+}
+.achieve-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+.achieve-dot:hover { background: rgba(255,255,255,0.4); }
+.achieve-dot.active {
+    background: var(--green-light);
+    box-shadow: 0 0 12px rgba(40,167,69,0.5);
+    transform: scale(1.2);
+}
+
+@media (max-width: 992px) {
+    .achieve-img { height: 420px; }
+    .achieve-caption { padding: 30px; }
+    .achieve-nav { width: 44px; height: 44px; font-size: 0.9rem; }
+    .achieve-prev { left: 12px; }
+    .achieve-next { right: 12px; }
+}
+@media (max-width: 640px) {
+    .achieve-img { height: 340px; }
+    .achieve-caption { padding: 20px; }
+    .achieve-caption h3 { font-size: 1.3rem; }
+    .achieve-caption p { font-size: 0.85rem; }
+    .achieve-nav { width: 38px; height: 38px; font-size: 0.8rem; }
+}
+
 /* ===== GALLERY ===== */
 .gallery { background: var(--white); }
 .gallery-filters {

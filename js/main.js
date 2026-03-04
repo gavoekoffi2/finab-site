@@ -187,6 +187,79 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Achievements Slider
+(function() {
+    const track = document.getElementById('achieveTrack');
+    const slides = track ? track.querySelectorAll('.achieve-slide') : [];
+    const prevBtn = document.getElementById('achievePrev');
+    const nextBtn = document.getElementById('achieveNext');
+    const dotsContainer = document.getElementById('achieveDots');
+    const progressBar = document.getElementById('achieveProgressBar');
+    if (!track || slides.length === 0) return;
+
+    let current = 0;
+    let autoplayTimer;
+    const AUTOPLAY_DELAY = 5000;
+
+    // Create dots
+    slides.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.className = 'achieve-dot' + (i === 0 ? ' active' : '');
+        dot.setAttribute('aria-label', 'Slide ' + (i + 1));
+        dot.addEventListener('click', () => goTo(i));
+        dotsContainer.appendChild(dot);
+    });
+
+    function goTo(index) {
+        slides[current].classList.remove('active');
+        current = (index + slides.length) % slides.length;
+        track.style.transform = 'translateX(-' + (current * 100) + '%)';
+        slides[current].classList.add('active');
+        // Update dots
+        dotsContainer.querySelectorAll('.achieve-dot').forEach((d, i) => {
+            d.classList.toggle('active', i === current);
+        });
+        // Update progress
+        progressBar.style.width = ((current + 1) / slides.length * 100) + '%';
+        resetAutoplay();
+    }
+
+    function resetAutoplay() {
+        clearInterval(autoplayTimer);
+        autoplayTimer = setInterval(() => goTo(current + 1), AUTOPLAY_DELAY);
+    }
+
+    prevBtn.addEventListener('click', () => goTo(current - 1));
+    nextBtn.addEventListener('click', () => goTo(current + 1));
+
+    // Touch/swipe support
+    let touchStartX = 0;
+    let touchEndX = 0;
+    track.addEventListener('touchstart', (e) => { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
+    track.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        const diff = touchStartX - touchEndX;
+        if (Math.abs(diff) > 50) {
+            diff > 0 ? goTo(current + 1) : goTo(current - 1);
+        }
+    }, { passive: true });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        const slider = document.getElementById('achieveSlider');
+        const rect = slider.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+            if (e.key === 'ArrowLeft') goTo(current - 1);
+            if (e.key === 'ArrowRight') goTo(current + 1);
+        }
+    });
+
+    // Init first slide
+    slides[0].classList.add('active');
+    progressBar.style.width = (1 / slides.length * 100) + '%';
+    resetAutoplay();
+})();
+
 // Gallery filter
 const galleryFilters = document.querySelectorAll('.gallery-filter');
 const galleryItems = document.querySelectorAll('.gallery-item');
