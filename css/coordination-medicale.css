@@ -1,0 +1,242 @@
+/* ===== COORDINATION MÉDICALE — Premium Page Styles ===== */
+
+/* ===== HERO MÉDICAL ===== */
+.med-hero {
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--navy) 0%, var(--green-dark) 50%, var(--navy) 100%);
+    overflow: hidden;
+}
+.med-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 20% 50%, rgba(27,107,58,0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(201,168,76,0.15) 0%, transparent 50%);
+}
+.med-hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    background: linear-gradient(to top, var(--white), transparent);
+    z-index: 2;
+}
+.med-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+}
+.med-hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: var(--white);
+    padding: 140px 0 120px;
+}
+.med-hero-content .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 900;
+    line-height: 1.15;
+    margin-bottom: 16px;
+}
+.med-hero-content .hero-subtitle {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    margin-bottom: 32px;
+    letter-spacing: 2px;
+}
+.med-hero-content .hero-subtitle i {
+    margin: 0 12px;
+    color: var(--gold);
+}
+.med-hero-badges {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.med-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    backdrop-filter: blur(10px);
+    transition: var(--transition);
+}
+.med-badge:hover {
+    background: rgba(255,255,255,0.15);
+    transform: translateY(-2px);
+}
+.med-badge i {
+    color: var(--green-light);
+    font-size: 1.1rem;
+}
+
+/* ===== TIMELINE ===== */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 28px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, var(--green), var(--green-light), var(--gold));
+    border-radius: 3px;
+}
+.timeline-item {
+    position: relative;
+    padding-left: 80px;
+    padding-bottom: 40px;
+}
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+.timeline-number {
+    position: absolute;
+    left: 8px;
+    top: 0;
+    width: 44px;
+    height: 44px;
+    background: linear-gradient(135deg, var(--green), var(--green-light));
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 15px rgba(27,107,58,0.3);
+    z-index: 1;
+}
+.timeline-content {
+    background: var(--white);
+    padding: 28px 32px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+.timeline-content:hover {
+    transform: translateX(8px);
+    box-shadow: var(--shadow-lg);
+}
+.timeline-content h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--text);
+}
+.timeline-content p {
+    color: var(--gray-600);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ===== PARTNERS GRID ===== */
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+}
+.partner-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 40px 24px;
+    text-align: center;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+.partner-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--green), var(--green-light));
+    transform: scaleX(0);
+    transition: var(--transition);
+}
+.partner-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+.partner-card:hover::before {
+    transform: scaleX(1);
+}
+.partner-icon {
+    width: 72px;
+    height: 72px;
+    background: linear-gradient(135deg, rgba(27,107,58,0.1), rgba(40,167,69,0.1));
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: var(--green);
+    margin: 0 auto 20px;
+    transition: var(--transition);
+}
+.partner-card:hover .partner-icon {
+    background: linear-gradient(135deg, var(--green), var(--green-light));
+    color: var(--white);
+}
+.partner-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+    .partners-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .med-hero-content {
+        padding: 120px 0 100px;
+    }
+}
+@media (max-width: 640px) {
+    .partners-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .med-hero-badges {
+        flex-direction: column;
+        align-items: center;
+    }
+    .timeline::before {
+        left: 18px;
+    }
+    .timeline-number {
+        left: 0;
+        width: 38px;
+        height: 38px;
+        font-size: 0.95rem;
+    }
+    .timeline-item {
+        padding-left: 60px;
+    }
+    .timeline-content {
+        padding: 20px;
+    }
+}

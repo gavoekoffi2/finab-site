@@ -2,12 +2,19 @@
 
 // Preloader
 window.addEventListener('load', () => {
-    setTimeout(() => {
-        document.getElementById('preloader').classList.add('hidden');
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        setTimeout(() => {
+            preloader.classList.add('hidden');
+            document.querySelectorAll('.fade-up, .fade-left, .fade-right').forEach(el => {
+                if (isInViewport(el)) el.classList.add('visible');
+            });
+        }, 1800);
+    } else {
         document.querySelectorAll('.fade-up, .fade-left, .fade-right').forEach(el => {
             if (isInViewport(el)) el.classList.add('visible');
         });
-    }, 1800);
+    }
 });
 
 // Navbar scroll
@@ -15,9 +22,9 @@ const navbar = document.getElementById('navbar');
 const backToTop = document.getElementById('backToTop');
 
 window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 50);
-    backToTop.classList.toggle('visible', window.scrollY > 400);
-    
+    if (navbar) navbar.classList.toggle('scrolled', window.scrollY > 50);
+    if (backToTop) backToTop.classList.toggle('visible', window.scrollY > 400);
+
     // Active nav link
     const sections = document.querySelectorAll('section[id]');
     let current = '';
@@ -30,7 +37,7 @@ window.addEventListener('scroll', () => {
 });
 
 // Back to top
-backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+if (backToTop) backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
 // Mobile menu
 const navToggle = document.getElementById('navToggle');
@@ -116,36 +123,36 @@ const heroSlides = document.querySelectorAll('.hero-slide');
 const sliderDots = document.querySelectorAll('.slider-dot');
 let currentHeroSlide = 0;
 
-function showHeroSlide(index) {
-    heroSlides.forEach(s => s.classList.remove('active'));
-    sliderDots.forEach(d => d.classList.remove('active'));
-    currentHeroSlide = (index + heroSlides.length) % heroSlides.length;
-    heroSlides[currentHeroSlide].classList.add('active');
-    sliderDots[currentHeroSlide].classList.add('active');
+if (heroSlides.length > 0) {
+    function showHeroSlide(index) {
+        heroSlides.forEach(s => s.classList.remove('active'));
+        sliderDots.forEach(d => d.classList.remove('active'));
+        currentHeroSlide = (index + heroSlides.length) % heroSlides.length;
+        heroSlides[currentHeroSlide].classList.add('active');
+        sliderDots[currentHeroSlide].classList.add('active');
+    }
+    sliderDots.forEach((dot, i) => dot.addEventListener('click', () => showHeroSlide(i)));
+    setInterval(() => showHeroSlide(currentHeroSlide + 1), 5000);
 }
-
-sliderDots.forEach((dot, i) => dot.addEventListener('click', () => showHeroSlide(i)));
-setInterval(() => showHeroSlide(currentHeroSlide + 1), 5000);
 
 // Testimonials slider
 const testimonials = document.querySelectorAll('.testimonial-card');
 const dots = document.querySelectorAll('.dot');
 let currentSlide = 0;
 
-function showSlide(index) {
-    testimonials.forEach(t => t.classList.remove('active'));
-    dots.forEach(d => d.classList.remove('active'));
-    currentSlide = (index + testimonials.length) % testimonials.length;
-    testimonials[currentSlide].classList.add('active');
-    dots[currentSlide].classList.add('active');
+if (testimonials.length > 0) {
+    function showSlide(index) {
+        testimonials.forEach(t => t.classList.remove('active'));
+        dots.forEach(d => d.classList.remove('active'));
+        currentSlide = (index + testimonials.length) % testimonials.length;
+        testimonials[currentSlide].classList.add('active');
+        dots[currentSlide].classList.add('active');
+    }
+    document.querySelector('.test-next')?.addEventListener('click', () => showSlide(currentSlide + 1));
+    document.querySelector('.test-prev')?.addEventListener('click', () => showSlide(currentSlide - 1));
+    dots.forEach((dot, i) => dot.addEventListener('click', () => showSlide(i)));
+    setInterval(() => showSlide(currentSlide + 1), 6000);
 }
-
-document.querySelector('.test-next')?.addEventListener('click', () => showSlide(currentSlide + 1));
-document.querySelector('.test-prev')?.addEventListener('click', () => showSlide(currentSlide - 1));
-dots.forEach((dot, i) => dot.addEventListener('click', () => showSlide(i)));
-
-// Auto-slide
-setInterval(() => showSlide(currentSlide + 1), 6000);
 
 // Contact form
 document.getElementById('contactForm')?.addEventListener('submit', (e) => {

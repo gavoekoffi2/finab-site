@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/coordination-medicale.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -33,165 +34,186 @@
     </header>
 
     <main>
-        <section class="section hero-medical py-5">
-            <div class="container text-center text-white py-5">
-                <h1 class="display-3 fw-bold fade-up">Coordination Médicale Internationale</h1>
-                <p class="lead mt-3 fade-up delay-1">AFRIQUE <i class="fas fa-arrow-right mx-2"></i> Canada</p>
-                <div class="d-flex justify-content-center gap-4 mt-4 fade-up delay-2">
-                    <span class="h4"><i class="fas fa-shield-alt text-success me-2"></i>Sécurité</span>
-                    <span class="h4"><i class="fas fa-check-circle text-info me-2"></i>Conformité</span>
-                    <span class="h4"><i class="fas fa-star text-warning me-2"></i>Excellence</span>
+        <!-- Hero Section -->
+        <section class="med-hero">
+            <div class="med-hero-overlay"></div>
+            <div class="container med-hero-content">
+                <span class="section-tag fade-up" style="background: rgba(255,255,255,0.15); color: #fff;">Coordination Médicale</span>
+                <h1 class="hero-title fade-up delay-1">
+                    Coordination Médicale <span class="text-gradient">Internationale</span>
+                </h1>
+                <p class="hero-subtitle fade-up delay-2">
+                    AFRIQUE <i class="fas fa-arrow-right"></i> Canada
+                </p>
+                <div class="med-hero-badges fade-up delay-3">
+                    <div class="med-badge"><i class="fas fa-shield-alt"></i> Sécurité</div>
+                    <div class="med-badge"><i class="fas fa-check-circle"></i> Conformité</div>
+                    <div class="med-badge"><i class="fas fa-star"></i> Excellence</div>
                 </div>
             </div>
         </section>
 
-        <section class="section mission bg-light" id="mission">
+        <!-- Mission Section -->
+        <section class="section" id="mission">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-6 d-flex align-items-center fade-left">
-                        <div>
-                            <h2 class="section-title"><span class="text-gradient">Notre</span> Mission</h2>
-                            <p class="lead">Nous facilitons et sécurisons l’accès aux soins spécialisés au Canada pour les patients provenant de la **RDC, d’Afrique centrale et Afrique de L'Ouest** , grâce à un service complet de coordination médicale, logistique et administrative.</p>
-                        </div>
+                <div class="about-grid">
+                    <div class="about-content fade-left">
+                        <span class="section-tag">Notre Mission</span>
+                        <h2 class="section-title"><span class="text-gradient">Notre</span> Mission</h2>
+                        <p>Nous facilitons et sécurisons l'accès aux soins spécialisés au Canada pour les patients provenant de la RDC, d'Afrique centrale et Afrique de L'Ouest, grâce à un service complet de coordination médicale, logistique et administrative.</p>
                     </div>
-                    <div class="col-md-6 text-center fade-right">
-                        <img src="../img/medical-mission.jpg" alt="Mission Médicale" class="img-fluid rounded shadow-lg">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section services-medical" id="services">
-            <div class="container">
-                <h2 class="section-title text-center mb-5"><span class="text-gradient">Nos</span> Services de Coordination</h2>
-                <div class="row row-cols-1 row-cols-md-3 g-4">
-                    <div class="col fade-up">
-                        <div class="card h-100 shadow-sm">
-                            <div class="card-body text-center">
-                                <i class="fas fa-file-alt fa-3x text-primary mb-3"></i>
-                                <h5 class="card-title">Préparation du Dossier Médical</h5>
-                                <p class="card-text">Collecte et organisation de tous les documents médicaux nécessaires à l'évaluation au Canada.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col fade-up delay-1">
-                        <div class="card h-100 shadow-sm">
-                            <div class="card-body text-center">
-                                <i class="fas fa-user-md fa-3x text-success mb-3"></i>
-                                <h5 class="card-title">Orientation vers des Spécialistes</h5>
-                                <p class="card-text">Mise en relation avec des médecins et cliniques accrédités au Canada selon la spécialité requise.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col fade-up delay-2">
-                        <div class="card h-100 shadow-sm">
-                            <div class="card-body text-center">
-                                <i class="fas fa-plane-departure fa-3x text-info mb-3"></i>
-                                <h5 class="card-title">Logistique Complète</h5>
-                                <p class="card-text">Gestion du voyage, hébergement, et transport local pour une tranquillité d'esprit totale.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col fade-up delay-3">
-                        <div class="card h-100 shadow-sm">
-                            <div class="card-body text-center">
-                                <i class="fas fa-shield-alt fa-3x text-warning mb-3"></i>
-                                <h5 class="card-title">Assurance Privée Internationale</h5>
-                                <p class="card-text">Prise en charge de l'obtention d'une couverture d'assurance adaptée à votre séjour médical.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col fade-up delay-4">
-                        <div class="card h-100 shadow-sm">
-                            <div class="card-body text-center">
-                                <i class="fas fa-clipboard-check fa-3x text-danger mb-3"></i>
-                                <h5 class="card-title">Accompagnement Administratif</h5>
-                                <p class="card-text">Assistance pour les démarches administratives et les visas si nécessaire.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col fade-up delay-5">
-                        <div class="card h-100 shadow-sm">
-                            <div class="card-body text-center">
-                                <i class="fas fa-heartbeat fa-3x text-success mb-3"></i>
-                                <h5 class="card-title">Suivi Post-Traitement</h5>
-                                <p class="card-text">Coordination du suivi nécessaire après le retour du patient dans son pays d'origine.</p>
-                            </div>
+                    <div class="about-image fade-right">
+                        <div class="about-img-wrapper">
+                            <img src="../img/region-canada.jpg" alt="Mission Médicale">
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section why-canada bg-light" id="why-canada">
+        <!-- Services de Coordination -->
+        <section class="section services" id="services">
             <div class="container">
-                <h2 class="section-title text-center mb-5"><span class="text-gradient">Pourquoi le</span> Canada ?</h2>
-                <div class="row align-items-center">
-                    <div class="col-md-6 fade-left">
-                        <img src="../img/canada-healthcare.jpg" alt="Hôpital Canadien" class="img-fluid rounded shadow-lg">
+                <div class="section-header fade-up">
+                    <span class="section-tag">Nos Services</span>
+                    <h2 class="section-title"><span class="text-gradient">Nos</span> Services de Coordination</h2>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card fade-up">
+                        <div class="service-body">
+                            <div class="service-icon"><i class="fas fa-file-alt"></i></div>
+                            <h3>Préparation du Dossier Médical</h3>
+                            <p>Collecte et organisation de tous les documents médicaux nécessaires à l'évaluation au Canada.</p>
+                        </div>
                     </div>
-                    <div class="col-md-6 fade-right">
-                        <ul class="list-unstyled why-canada-list">
-                            <li><i class="fas fa-clinic-medical me-3 text-primary"></i> <strong>Excellence médicale</strong> reconnue mondialement</li>
-                            <li><i class="fas fa-user-nurse me-3 text-success"></i> <strong>Spécialistes</strong> hautement qualifiés</li>
-                            <li><i class="fas fa-microscope me-3 text-info"></i> <strong>Équipements de pointe</strong></li>
-                            <li><i class="fas fa-file-contract me-3 text-warning"></i> <strong>Processus rigoureux</strong> et sécurisés</li>
-                        </ul>
+                    <div class="service-card fade-up delay-1">
+                        <div class="service-body">
+                            <div class="service-icon"><i class="fas fa-user-md"></i></div>
+                            <h3>Orientation vers des Spécialistes</h3>
+                            <p>Mise en relation avec des médecins et cliniques accrédités au Canada selon la spécialité requise.</p>
+                        </div>
+                    </div>
+                    <div class="service-card fade-up delay-2">
+                        <div class="service-body">
+                            <div class="service-icon"><i class="fas fa-plane-departure"></i></div>
+                            <h3>Logistique Complète</h3>
+                            <p>Gestion du voyage, hébergement, et transport local pour une tranquillité d'esprit totale.</p>
+                        </div>
+                    </div>
+                    <div class="service-card fade-up delay-3">
+                        <div class="service-body">
+                            <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+                            <h3>Assurance Privée Internationale</h3>
+                            <p>Prise en charge de l'obtention d'une couverture d'assurance adaptée à votre séjour médical.</p>
+                        </div>
+                    </div>
+                    <div class="service-card fade-up delay-4">
+                        <div class="service-body">
+                            <div class="service-icon"><i class="fas fa-clipboard-check"></i></div>
+                            <h3>Accompagnement Administratif</h3>
+                            <p>Assistance pour les démarches administratives et les visas si nécessaire.</p>
+                        </div>
+                    </div>
+                    <div class="service-card fade-up delay-5">
+                        <div class="service-body">
+                            <div class="service-icon"><i class="fas fa-heartbeat"></i></div>
+                            <h3>Suivi Post-Traitement</h3>
+                            <p>Coordination du suivi nécessaire après le retour du patient dans son pays d'origine.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section patient-journey" id="patient-journey">
+        <!-- Pourquoi le Canada -->
+        <section class="section" id="why-canada">
             <div class="container">
-                <h2 class="section-title text-center mb-5"><span class="text-gradient">Notre</span> Parcours Patient</h2>
+                <div class="about-grid">
+                    <div class="about-image fade-left">
+                        <div class="about-img-wrapper">
+                            <img src="../img/region-canada.jpg" alt="Hôpital Canadien">
+                        </div>
+                    </div>
+                    <div class="about-content fade-right">
+                        <span class="section-tag">Destination</span>
+                        <h2 class="section-title"><span class="text-gradient">Pourquoi le</span> Canada ?</h2>
+                        <div class="about-features">
+                            <div class="feature">
+                                <i class="fas fa-clinic-medical"></i>
+                                <span><strong>Excellence médicale</strong> reconnue mondialement</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-user-nurse"></i>
+                                <span><strong>Spécialistes</strong> hautement qualifiés</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-microscope"></i>
+                                <span><strong>Équipements de pointe</strong></span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-file-contract"></i>
+                                <span><strong>Processus rigoureux</strong> et sécurisés</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Parcours Patient (Timeline) -->
+        <section class="section services" id="patient-journey">
+            <div class="container">
+                <div class="section-header fade-up">
+                    <span class="section-tag">Parcours</span>
+                    <h2 class="section-title"><span class="text-gradient">Notre</span> Parcours Patient</h2>
+                </div>
                 <div class="timeline">
                     <div class="timeline-item fade-up">
-                        <div class="timeline-icon"><i class="fas fa-search"></i></div>
+                        <div class="timeline-number">1</div>
                         <div class="timeline-content">
-                            <h4>1. Pré-qualification</h4>
+                            <h3>Pré-qualification</h3>
                             <p>Évaluation initiale du besoin médical et de l'éligibilité au programme de coordination.</p>
                         </div>
                     </div>
                     <div class="timeline-item fade-up delay-1">
-                        <div class="timeline-icon"><i class="fas fa-file-medical"></i></div>
+                        <div class="timeline-number">2</div>
                         <div class="timeline-content">
-                            <h4>2. Analyse Médicale Préliminaire</h4>
+                            <h3>Analyse Médicale Préliminaire</h3>
                             <p>Dossier examiné par nos experts pour une pré-évaluation et orientation.</p>
                         </div>
                     </div>
                     <div class="timeline-item fade-up delay-2">
-                        <div class="timeline-icon"><i class="fas fa-stethoscope"></i></div>
+                        <div class="timeline-number">3</div>
                         <div class="timeline-content">
-                            <h4>3. Plan de Soins + Estimation</h4>
+                            <h3>Plan de Soins + Estimation</h3>
                             <p>Proposition d'un plan de traitement détaillé et estimation des coûts associés.</p>
                         </div>
                     </div>
                     <div class="timeline-item fade-up delay-3">
-                        <div class="timeline-icon"><i class="fas fa-plane"></i></div>
+                        <div class="timeline-number">4</div>
                         <div class="timeline-content">
-                            <h4>4. Logistique + Assurance</h4>
+                            <h3>Logistique + Assurance</h3>
                             <p>Organisation du voyage, hébergement et mise en place de l'assurance internationale.</p>
                         </div>
                     </div>
                     <div class="timeline-item fade-up delay-4">
-                        <div class="timeline-icon"><i class="fas fa-hospital-user"></i></div>
+                        <div class="timeline-number">5</div>
                         <div class="timeline-content">
-                            <h4>5. Arrivée au Canada</h4>
+                            <h3>Arrivée au Canada</h3>
                             <p>Accueil et transfert du patient vers la structure médicale désignée.</p>
                         </div>
                     </div>
                     <div class="timeline-item fade-up delay-5">
-                        <div class="timeline-icon"><i class="fas fa-handshake"></i></div>
+                        <div class="timeline-number">6</div>
                         <div class="timeline-content">
-                            <h4>6. Accompagnement</h4>
+                            <h3>Accompagnement</h3>
                             <p>Soutien continu pendant le séjour médical : traduction, assistance quotidienne.</p>
                         </div>
                     </div>
                     <div class="timeline-item fade-up delay-6">
-                        <div class="timeline-icon"><i class="fas fa-heartbeat"></i></div>
+                        <div class="timeline-number">7</div>
                         <div class="timeline-content">
-                            <h4>7. Suivi Post-Traitement</h4>
+                            <h3>Suivi Post-Traitement</h3>
                             <p>Organisation du suivi médical et du retour dans le pays d'origine.</p>
                         </div>
                     </div>
@@ -199,61 +221,86 @@
             </div>
         </section>
 
-        <section class="section partners bg-light" id="partners">
+        <!-- Partenaires Cibles -->
+        <section class="section" id="partners">
             <div class="container">
-                <h2 class="section-title text-center mb-5"><span class="text-gradient">Nos</span> Partenaires Cibles</h2>
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-                    <div class="col fade-up">
-                        <div class="partner-card h-100 text-center p-4 shadow-sm rounded">
-                            <i class="fas fa-hospital-alt fa-4x text-primary mb-3"></i>
-                            <h5 class="card-title">Cliniques Privées</h5>
-                        </div>
+                <div class="section-header fade-up">
+                    <span class="section-tag">Réseau</span>
+                    <h2 class="section-title"><span class="text-gradient">Nos</span> Partenaires Cibles</h2>
+                </div>
+                <div class="partners-grid">
+                    <div class="partner-card fade-up">
+                        <div class="partner-icon"><i class="fas fa-hospital-alt"></i></div>
+                        <h3>Cliniques Privées</h3>
                     </div>
-                    <div class="col fade-up delay-1">
-                        <div class="partner-card h-100 text-center p-4 shadow-sm rounded">
-                            <i class="fas fa-medkit fa-4x text-success mb-3"></i>
-                            <h5 class="card-title">Centres Spécialisés</h5>
-                        </div>
+                    <div class="partner-card fade-up delay-1">
+                        <div class="partner-icon"><i class="fas fa-medkit"></i></div>
+                        <h3>Centres Spécialisés</h3>
                     </div>
-                    <div class="col fade-up delay-2">
-                        <div class="partner-card h-100 text-center p-4 shadow-sm rounded">
-                            <i class="fas fa-hand-holding-usd fa-4x text-info mb-3"></i>
-                            <h5 class="card-title">Assureurs Internationaux</h5>
-                        </div>
+                    <div class="partner-card fade-up delay-2">
+                        <div class="partner-icon"><i class="fas fa-hand-holding-usd"></i></div>
+                        <h3>Assureurs Internationaux</h3>
                     </div>
-                    <div class="col fade-up delay-3">
-                        <div class="partner-card h-100 text-center p-4 shadow-sm rounded">
-                            <i class="fas fa-flask fa-4x text-warning mb-3"></i>
-                            <h5 class="card-title">Laboratoires</h5>
-                        </div>
+                    <div class="partner-card fade-up delay-3">
+                        <div class="partner-icon"><i class="fas fa-flask"></i></div>
+                        <h3>Laboratoires</h3>
                     </div>
-                    <div class="col fade-up delay-4">
-                        <div class="partner-card h-100 text-center p-4 shadow-sm rounded">
-                            <i class="fas fa-ambulance fa-4x text-danger mb-3"></i>
-                            <h5 class="card-title">Services de Transport Médical</h5>
-                        </div>
+                    <div class="partner-card fade-up delay-4">
+                        <div class="partner-icon"><i class="fas fa-ambulance"></i></div>
+                        <h3>Services de Transport Médical</h3>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section problem-solution bg-dark text-white" id="problem-solution">
+        <!-- Problème / Solution -->
+        <section class="section regions" id="problem-solution">
             <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-6 fade-left">
-                        <h2 class="section-title"><span class="text-gradient">Le</span> Problème</h2>
-                        <ul class="list-unstyled problem-list">
-                            <li><i class="fas fa-times-circle me-3 text-danger"></i> Accès limité aux soins spécialisés en Afrique centrale</li>
-                            <li><i class="fas fa-globe me-3 text-warning"></i> Parcours international complexe</li>
-                            <li><i class="fas fa-exclamation-triangle me-3 text-danger"></i> Risques administratifs et financiers</li>
-                            <li><i class="fas fa-search-minus me-3 text-info"></i> Manque de coordination professionnelle</li>
-                        </ul>
+                <div class="about-grid">
+                    <div class="about-content fade-left">
+                        <h2 class="section-title" style="color: #fff;">Le <span class="text-gradient">Problème</span></h2>
+                        <div class="about-features" style="margin-top: 20px;">
+                            <div class="feature" style="color: rgba(255,255,255,0.9);">
+                                <i class="fas fa-times-circle" style="color: var(--red);"></i>
+                                <span>Accès limité aux soins spécialisés en Afrique centrale</span>
+                            </div>
+                            <div class="feature" style="color: rgba(255,255,255,0.9);">
+                                <i class="fas fa-globe" style="color: var(--gold);"></i>
+                                <span>Parcours international complexe</span>
+                            </div>
+                            <div class="feature" style="color: rgba(255,255,255,0.9);">
+                                <i class="fas fa-exclamation-triangle" style="color: var(--red);"></i>
+                                <span>Risques administratifs et financiers</span>
+                            </div>
+                            <div class="feature" style="color: rgba(255,255,255,0.9);">
+                                <i class="fas fa-search-minus" style="color: var(--gold);"></i>
+                                <span>Manque de coordination professionnelle</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-6 fade-right">
-                        <h2 class="section-title"><span class="text-gradient">Notre</span> Solution</h2>
-                        <p class="lead mt-4">Un service complet de **conciergerie médicale internationale**, conforme aux normes canadiennes, garantissant **Sécurité, Conformité et Excellence** à chaque étape du processus.</p>
-                        <a href="../index.html#contact" class="btn btn-primary btn-lg mt-4">
-                            <i class="fas fa-phone-alt me-2"></i> Contactez-nous pour en savoir plus
+                    <div class="about-content fade-right">
+                        <h2 class="section-title" style="color: #fff;">Notre <span class="text-gradient">Solution</span></h2>
+                        <p style="color: rgba(255,255,255,0.85); margin-top: 20px; font-size: 1.05rem;">Un service complet de conciergerie médicale internationale, conforme aux normes canadiennes, garantissant <strong>Sécurité, Conformité et Excellence</strong> à chaque étape du processus.</p>
+                        <a href="../index.html#contact" class="btn btn-primary btn-lg" style="margin-top: 30px;">
+                            <i class="fas fa-phone-alt"></i> Contactez-nous
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="section cta-section">
+            <div class="container">
+                <div class="cta-content fade-up">
+                    <h2>Besoin d'une Coordination Médicale ?</h2>
+                    <p>Nos experts sont disponibles pour vous accompagner dans votre parcours médical vers le Canada.</p>
+                    <div class="cta-buttons">
+                        <a href="../index.html#contact" class="btn btn-white btn-lg">
+                            <i class="fas fa-calendar-check"></i> Prendre Rendez-Vous
+                        </a>
+                        <a href="../index.html#diagnostic" class="btn btn-outline-white btn-lg">
+                            <i class="fas fa-stethoscope"></i> Diagnostic Gratuit
                         </a>
                     </div>
                 </div>
@@ -261,7 +308,7 @@
         </section>
     </main>
 
-    <!-- Footer (copied from index.html, paths adjusted) -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
