@@ -6,6 +6,12 @@
     <title>FINAB La Solution — La Résurrection Financière | Afrique - Haïti - Canada</title>
     <meta name="description" content="FINAB La Solution : services financiers, impôts, assurances et formations pour les familles canadiennes, africaines et haïtiennes.">
     <link rel="icon" href="img/logo-white.webp">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="FINAB La Solution — La Résurrection Financière">
+    <meta property="og:description" content="Impôts, assurances, formations et coordination médicale pour les familles d'Afrique, d'Haïti et du Canada.">
+    <meta property="og:image" content="img/hero1.jpg">
+    <meta property="og:locale" content="fr_CA">
+    <meta name="twitter:card" content="summary_large_image">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -59,6 +65,9 @@
             <div class="hero-slide" style="background-image: url('img/hero5.jpg')">
                 <div class="slide-overlay"></div>
             </div>
+            <div class="hero-slide" style="background-image: url('img/hero4.jpg')">
+                <div class="slide-overlay"></div>
+            </div>
         </div>
         <div class="particles" id="particles"></div>
         <div class="container hero-content">
@@ -84,7 +93,7 @@
             </div>
             <div class="hero-stats fade-up delay-4">
                 <div class="stat">
-                    <span class="stat-number" data-count="1500">0</span>+
+                    <span class="stat-number" data-count="2000">0</span>+
                     <span class="stat-label">Familles Accompagnées</span>
                 </div>
                 <div class="stat">
@@ -98,13 +107,12 @@
             </div>
         </div>
         <!-- Slider Navigation -->
-        <div class="hero-slider-nav">
-            <span class="slider-dot active" data-slide="0"></span>
-            <span class="slider-dot" data-slide="1"></span>
-            <span class="slider-dot" data-slide="2"></span>
-            <span class="slider-dot" data-slide="3"></span>
-            <span class="slider-dot" data-slide="4"></span>
-            <span class="slider-dot" data-slide="5"></span>
+        <div class="hero-slider-nav" aria-label="Choisir une image du carrousel">
+            <button type="button" class="slider-dot active" aria-label="Image 1"></button>
+            <button type="button" class="slider-dot" aria-label="Image 2"></button>
+            <button type="button" class="slider-dot" aria-label="Image 3"></button>
+            <button type="button" class="slider-dot" aria-label="Image 4"></button>
+            <button type="button" class="slider-dot" aria-label="Image 5"></button>
         </div>
         <div class="hero-scroll">
             <a href="#services"><i class="fas fa-chevron-down"></i></a>
@@ -120,8 +128,8 @@
                 <p class="section-desc">Quelle que soit la complexité de votre dossier, nos experts trouvent toujours la solution.</p>
             </div>
             <div class="services-grid">
-                <div class="service-card fade-up" data-tilt>
-                    <div class="service-img"><img src="img/service-impots.jpg" alt="Impôts & Taxes"></div>
+                <div class="service-card fade-up">
+                    <div class="service-img"><img src="img/service-impots.jpg" loading="lazy" decoding="async" alt="Impôts & Taxes"></div>
                     <div class="service-body">
                         <div class="service-icon"><i class="fas fa-file-invoice-dollar"></i></div>
                         <h3>Impôts & Taxes</h3>
@@ -129,8 +137,8 @@
                         <a href="#contact" class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="service-card fade-up delay-1" data-tilt>
-                    <div class="service-img"><img src="img/service-assurance.jpg" alt="Assurances"></div>
+                <div class="service-card fade-up delay-1">
+                    <div class="service-img"><img src="img/service-assurance.jpg" loading="lazy" decoding="async" alt="Assurances"></div>
                     <div class="service-body">
                         <div class="service-icon"><i class="fas fa-shield-halved"></i></div>
                         <h3>Assurances</h3>
@@ -138,8 +146,8 @@
                         <a href="#contact" class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="service-card fade-up delay-2" data-tilt>
-                    <div class="service-img"><img src="img/service-formation.jpg" alt="Formations"></div>
+                <div class="service-card fade-up delay-2">
+                    <div class="service-img"><img src="img/service-formation.jpg" loading="lazy" decoding="async" alt="Formations"></div>
                     <div class="service-body">
                         <div class="service-icon"><i class="fas fa-graduation-cap"></i></div>
                         <h3>Formations</h3>
@@ -147,8 +155,8 @@
                         <a href="#contact" class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="service-card fade-up delay-3" data-tilt>
-                    <div class="service-img"><img src="img/service-famille.jpg" alt="Protection Familiale"></div>
+                <div class="service-card fade-up delay-3">
+                    <div class="service-img"><img src="img/service-famille.jpg" loading="lazy" decoding="async" alt="Protection Familiale"></div>
                     <div class="service-body">
                         <div class="service-icon"><i class="fas fa-hand-holding-heart"></i></div>
                         <h3>Protection Familiale</h3>
@@ -156,8 +164,8 @@
                         <a href="#contact" class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="service-card fade-up delay-4" data-tilt>
-                    <div class="service-img"><img src="img/service-finance.jpg" alt="Planification Financière"></div>
+                <div class="service-card fade-up delay-4">
+                    <div class="service-img"><img src="img/service-finance.jpg" loading="lazy" decoding="async" alt="Planification Financière"></div>
                     <div class="service-body">
                         <div class="service-icon"><i class="fas fa-chart-line"></i></div>
                         <h3>Planification Financière</h3>
@@ -165,8 +173,8 @@
                         <a href="#contact" class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="service-card fade-up delay-5" data-tilt>
-                    <div class="service-img"><img src="img/service-international.jpg" alt="Services Internationaux"></div>
+                <div class="service-card fade-up delay-5">
+                    <div class="service-img"><img src="img/service-international.jpg" loading="lazy" decoding="async" alt="Services Internationaux"></div>
                     <div class="service-body">
                         <div class="service-icon"><i class="fas fa-globe-africa"></i></div>
                         <h3>Services Internationaux</h3>
@@ -184,7 +192,7 @@
             <div class="about-grid">
                 <div class="about-image fade-left">
                     <div class="about-img-wrapper">
-                        <img src="img/community-image.jpg" alt="FINAB Équipe">
+                        <img src="img/about.jpg" loading="lazy" decoding="async" alt="L'équipe FINAB La Solution">
                         <div class="about-badge">
                             <span class="badge-number">10+</span>
                             <span class="badge-text">Années d'Excellence</span>
@@ -231,7 +239,7 @@
             </div>
             <div class="regions-grid">
                 <div class="region-card fade-up">
-                    <div class="region-img"><img src="img/region-afrique.jpg" alt="Afrique"></div>
+                    <div class="region-img"><img src="img/region-afrique.jpg" loading="lazy" decoding="async" alt="Afrique"></div>
                     <div class="region-body">
                         <div class="region-icon">🌍</div>
                         <h3>Afrique</h3>
@@ -239,7 +247,7 @@
                     </div>
                 </div>
                 <div class="region-card fade-up delay-1">
-                    <div class="region-img"><img src="img/region-haiti.jpg" alt="Haïti"></div>
+                    <div class="region-img"><img src="img/region-haiti.jpg" loading="lazy" decoding="async" alt="Haïti"></div>
                     <div class="region-body">
                         <div class="region-icon">🇭🇹</div>
                         <h3>Haïti</h3>
@@ -247,7 +255,7 @@
                     </div>
                 </div>
                 <div class="region-card fade-up delay-2">
-                    <div class="region-img"><img src="img/region-canada.jpg" alt="Canada"></div>
+                    <div class="region-img"><img src="img/region-canada.jpg" loading="lazy" decoding="async" alt="Canada"></div>
                     <div class="region-body">
                         <div class="region-icon">🇨🇦</div>
                         <h3>Canada</h3>
@@ -308,9 +316,9 @@
                 <div class="testimonial-nav">
                     <button class="test-prev" aria-label="Précédent"><i class="fas fa-chevron-left"></i></button>
                     <div class="test-dots">
-                        <span class="dot active"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
+                        <button type="button" class="dot active" aria-label="Témoignage 1"></button>
+                        <button type="button" class="dot" aria-label="Témoignage 2"></button>
+                        <button type="button" class="dot" aria-label="Témoignage 3"></button>
                     </div>
                     <button class="test-next" aria-label="Suivant"><i class="fas fa-chevron-right"></i></button>
                 </div>
@@ -327,7 +335,7 @@
                 <p class="section-desc">Répondez à quelques questions et recevez un diagnostic personnalisé gratuit de nos experts.</p>
             </div>
             <div class="diagnostic-wrapper fade-up">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScCma5qRB0hT_2P0PGqeSwTeg1uvLmOYzKhtQ_eGNnMEmuTTg/viewform?embedded=true" width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0" style="border-radius: 16px; border: none;">Chargement…</iframe>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScCma5qRB0hT_2P0PGqeSwTeg1uvLmOYzKhtQ_eGNnMEmuTTg/viewform?embedded=true" title="Diagnostic financier gratuit FINAB" width="100%" height="900" loading="lazy" style="border-radius: 16px; border: none;">Chargement…</iframe>
             </div>
         </div>
     </section>
@@ -342,8 +350,8 @@
                     <a href="#contact" class="btn btn-white btn-lg">
                         <i class="fas fa-calendar-check"></i> Prendre Rendez-Vous
                     </a>
-                    <a href="tel:+1234567890" class="btn btn-outline-white btn-lg">
-                        <i class="fas fa-phone"></i> Appelez-Nous
+                    <a href="mailto:contact@finablasolution.com" class="btn btn-outline-white btn-lg">
+                        <i class="fas fa-envelope"></i> Écrivez-Nous
                     </a>
                 </div>
             </div>
@@ -370,7 +378,7 @@
                         <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                         <div>
                             <h4>Email</h4>
-                            <p>contact@finablasolution.com</p>
+                            <p><a href="mailto:contact@finablasolution.com">contact@finablasolution.com</a></p>
                         </div>
                     </div>
                     <div class="contact-card">
@@ -387,7 +395,12 @@
                         <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
-                <form class="contact-form fade-right" id="contactForm">
+                <form class="contact-form fade-right" id="contactForm" name="contact" method="POST"
+                      action="/" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="contact">
+                    <p class="hp-field" aria-hidden="true">
+                        <label>Ne pas remplir : <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+                    </p>
                     <div class="form-row">
                         <div class="form-group">
                             <label for="name">Nom Complet *</label>
@@ -418,6 +431,7 @@
                     <button type="submit" class="btn btn-primary btn-lg btn-full">
                         <i class="fas fa-paper-plane"></i> Envoyer le Message
                     </button>
+                    <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
                 </form>
             </div>
         </div>
@@ -461,7 +475,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 FINAB La Solution. Tous droits réservés.</p>
+                <p>&copy; <span data-current-year>2026</span> FINAB La Solution. Tous droits réservés.</p>
             </div>
         </div>
     </footer>

@@ -33,3 +33,10 @@
 
 /* ===== Typewriter cursor ===== */
 @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+.delay-6 { transition-delay: 0.9s !important; }
+
+/* Respect des préférences système : pas d'animation forcée. */
+@media (prefers-reduced-motion: reduce) {
+    .fade-up, .fade-left, .fade-right { opacity: 1; transform: none; transition: none; }
+    .about-badge { animation: none; }
+}

@@ -560,3 +560,57 @@ body {
     .contact-form { padding: 24px; }
     .testimonial-card { padding: 30px 20px; }
 }
+
+/* ===== Puces de carrousel générées en <button> ===== */
+.slider-dot,
+.dot {
+    border: none;
+    padding: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    font: inherit;
+}
+.slider-dot:focus-visible,
+.dot:focus-visible,
+.back-to-top:focus-visible,
+.nav-toggle:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 3px;
+}
+
+/* Les chiffres des compteurs ne doivent pas « sauter » pendant l'animation. */
+.stat-number {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: 'tnum';
+}
+
+/* ===== Formulaire de contact : piège à robots + message d'état ===== */
+.hp-field {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+.form-status {
+    margin-top: 16px;
+    padding: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+.form-status:not(:empty) {
+    padding: 14px 16px;
+    border-radius: var(--radius-sm);
+}
+.form-status.success {
+    background: rgba(40, 167, 69, 0.12);
+    color: var(--green-dark);
+    border: 1px solid rgba(40, 167, 69, 0.3);
+}
+.form-status.error {
+    background: rgba(212, 32, 39, 0.08);
+    color: var(--red);
+    border: 1px solid rgba(212, 32, 39, 0.25);
+}
+.form-status a { color: inherit; font-weight: 600; }
+.contact-form button[type=submit][disabled] { opacity: 0.7; cursor: progress; }

@@ -6,14 +6,22 @@
     <title>Coordination Médicale Internationale — FINAB La Solution</title>
     <meta name="description" content="Coordination Médicale Internationale AFRIQUE → Canada. Sécurité • Conformité • Excellence.">
     <link rel="icon" href="../img/logo.webp">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Coordination Médicale Internationale — FINAB La Solution">
+    <meta property="og:description" content="Coordination Médicale Internationale AFRIQUE → Canada. Sécurité • Conformité • Excellence.">
+    <meta property="og:image" content="../img/medical-mission.jpg">
+    <meta property="og:locale" content="fr_CA">
+    <meta name="twitter:card" content="summary_large_image">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/medical-page.css">
+    <link rel="stylesheet" href="../css/chatbot.css">
 </head>
 <body>
     <!-- Navigation -->
-    <header id="navbar" class="navbar scrolled">
+    <header id="navbar" class="navbar scrolled static-scrolled">
         <div class="container nav-container">
             <a href="../index.html" class="nav-logo">
                 <img src="../img/logo.webp" alt="FINAB La Solution">
@@ -51,11 +59,11 @@
                     <div class="col-md-6 d-flex align-items-center fade-left">
                         <div>
                             <h2 class="section-title"><span class="text-gradient">Notre</span> Mission</h2>
-                            <p class="lead">Nous facilitons et sécurisons l’accès aux soins spécialisés au Canada pour les patients provenant de la **RDC, d’Afrique centrale et Afrique de L'Ouest** , grâce à un service complet de coordination médicale, logistique et administrative.</p>
+                            <p class="lead">Nous facilitons et sécurisons l’accès aux soins spécialisés au Canada pour les patients provenant de la <strong>RDC, d’Afrique centrale et d’Afrique de l’Ouest</strong>, grâce à un service complet de coordination médicale, logistique et administrative.</p>
                         </div>
                     </div>
                     <div class="col-md-6 text-center fade-right">
-                        <img src="../img/medical-mission.jpg" alt="Mission Médicale" class="img-fluid rounded shadow-lg">
+                        <img src="../img/medical-mission.jpg" loading="lazy" decoding="async" alt="Mission Médicale" class="img-fluid rounded shadow-lg">
                     </div>
                 </div>
             </div>
@@ -128,7 +136,7 @@
                 <h2 class="section-title text-center mb-5"><span class="text-gradient">Pourquoi le</span> Canada ?</h2>
                 <div class="row align-items-center">
                     <div class="col-md-6 fade-left">
-                        <img src="../img/canada-healthcare.jpg" alt="Hôpital Canadien" class="img-fluid rounded shadow-lg">
+                        <img src="../img/canada-healthcare.jpg" loading="lazy" decoding="async" alt="Hôpital Canadien" class="img-fluid rounded shadow-lg">
                     </div>
                     <div class="col-md-6 fade-right">
                         <ul class="list-unstyled why-canada-list">
@@ -251,7 +259,7 @@
                     </div>
                     <div class="col-md-6 fade-right">
                         <h2 class="section-title"><span class="text-gradient">Notre</span> Solution</h2>
-                        <p class="lead mt-4">Un service complet de **conciergerie médicale internationale**, conforme aux normes canadiennes, garantissant **Sécurité, Conformité et Excellence** à chaque étape du processus.</p>
+                        <p class="lead mt-4">Un service complet de <strong>conciergerie médicale internationale</strong>, conforme aux normes canadiennes, garantissant <strong>Sécurité, Conformité et Excellence</strong> à chaque étape du processus.</p>
                         <a href="../index.html#contact" class="btn btn-primary btn-lg mt-4">
                             <i class="fas fa-phone-alt me-2"></i> Contactez-nous pour en savoir plus
                         </a>
@@ -298,10 +306,47 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 FINAB La Solution. Tous droits réservés.</p>
+                <p>&copy; <span data-current-year>2026</span> FINAB La Solution. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
+
+    <!-- Chatbot -->
+    <div id="chatbot" class="chatbot">
+        <button class="chatbot-toggle" id="chatbotToggle" aria-label="Assistant virtuel">
+            <i class="fas fa-comments"></i>
+            <span class="chatbot-pulse"></span>
+        </button>
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <div class="chatbot-header-info">
+                    <div class="chatbot-avatar"><i class="fas fa-robot"></i></div>
+                    <div>
+                        <strong>Assistant FINAB</strong>
+                        <span class="chatbot-status">En ligne</span>
+                    </div>
+                </div>
+                <button class="chatbot-close" id="chatbotClose" aria-label="Fermer"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="chat-message bot">
+                    <div class="chat-bubble">
+                        👋 Bonjour ! Je suis l'assistant virtuel de FINAB La Solution. Comment puis-je vous aider aujourd'hui ?
+                    </div>
+                </div>
+                <div class="chat-suggestions">
+                    <button class="suggestion" data-msg="Parlez-moi de la coordination médicale">🏥 Coordination Médicale</button>
+                    <button class="suggestion" data-msg="Quels sont vos services ?">📋 Nos Services</button>
+                    <button class="suggestion" data-msg="Je veux prendre rendez-vous">📅 Prendre RDV</button>
+                    <button class="suggestion" data-msg="Comment vous contacter ?">📞 Contact</button>
+                </div>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="chatInput" placeholder="Tapez votre message..." autocomplete="off">
+                <button id="chatSend" aria-label="Envoyer"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
 
     <!-- Back to Top -->
     <button id="backToTop" class="back-to-top" aria-label="Retour en haut">
@@ -309,5 +354,6 @@
     </button>
 
     <script src="../js/main.js"></script>
+    <script src="../js/chatbot.js"></script>
 </body>
 </html>

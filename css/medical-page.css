@@ -167,3 +167,31 @@
     .row-cols-md-3 > * { flex: 0 0 auto; width: 100%; }
     .row-cols-lg-4 > * { flex: 0 0 auto; width: 100%; }
 }
+/* ===== Utilitaires manquants (utilisés dans le HTML de la page) ===== */
+.display-3 { font-size: clamp(2.2rem, 5.5vw, 3.5rem); line-height: 1.15; }
+.fw-bold { font-weight: 700; }
+.h-100 { height: 100%; }
+.p-4 { padding: 1.5rem; }
+.mt-5 { margin-top: 3rem; }
+.mb-4 { margin-bottom: 1.5rem; }
+.list-unstyled { list-style: none; padding-left: 0; }
+.shadow-sm { box-shadow: var(--shadow); }
+.text-danger { color: var(--red); }
+.fa-4x { font-size: 3rem; }
+.g-4 > * { margin-top: 1.5rem; }
+
+/* 4 colonnes en grand écran (row-cols-lg-4), 2 en tablette, 1 en mobile. */
+@media (max-width: 992px) {
+    .row-cols-md-2 > * { flex: 0 0 auto; width: 50%; }
+}
+@media (max-width: 576px) {
+    .row-cols-md-2 > * { width: 100%; }
+}
+@media (max-width: 768px) {
+    .d-flex.gap-4 { flex-wrap: wrap; }
+}
+
+/* Dans un conteneur flex, l'espace entre <strong> et le texte suivant est
+   supprimé : on le rétablit explicitement. */
+.why-canada-list li,
+.problem-list li { column-gap: 0.3em; }

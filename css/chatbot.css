@@ -120,3 +120,20 @@
 @media (max-width: 480px) {
     .chatbot-window { width: calc(100vw - 32px); right: -8px; height: 70vh; }
 }
+
+/* Zone cliquable garantie même si l'icône (CDN) ne se charge pas. */
+.chatbot-close,
+#chatSend {
+    min-width: 34px;
+    min-height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.chatbot-close:focus-visible,
+#chatSend:focus-visible,
+.chatbot-toggle:focus-visible,
+.suggestion:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 2px;
+}
